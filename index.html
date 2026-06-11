@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="La Bella Cucina – Authentic Italian cuisine in the heart of the city. Reserve your table and discover our handcrafted menu." />
+  <meta name="theme-color" content="#8B0000" />
+  <title>La Bella Cucina – Authentic Italian Restaurant</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- =====================================================
+       NAVIGATION
+  ====================================================== -->
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#hero" class="nav__logo" aria-label="La Bella Cucina – home">
+        <span class="nav__logo-script">La Bella Cucina</span>
+      </a>
+
+      <button
+        class="nav__hamburger"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+        type="button"
+      >
+        <span class="nav__hamburger-bar"></span>
+        <span class="nav__hamburger-bar"></span>
+        <span class="nav__hamburger-bar"></span>
+      </button>
+
+      <ul class="nav__menu" id="nav-menu" role="list">
+        <li><a href="#hero"         class="nav__link">Home</a></li>
+        <li><a href="#menu"         class="nav__link">Menu</a></li>
+        <li><a href="#our-story"    class="nav__link">Our Story</a></li>
+        <li><a href="#reservations" class="nav__link nav__link--cta">Reserve</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ===================================================
+         SECTION F1 – HERO
+    ==================================================== -->
+    <section id="hero" class="hero" aria-label="Welcome to La Bella Cucina">
+      <div class="hero__backdrop" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <p class="hero__eyebrow">Est. 1987 · Milano</p>
+        <h1 class="hero__title">
+          <span class="hero__title-script">La Bella</span>
+          <span class="hero__title-serif">Cucina</span>
+        </h1>
+        <p class="hero__tagline">Where every plate tells a story of the old country.</p>
+        <div class="hero__actions">
+          <a href="#reservations" class="btn btn--primary">Reserve a Table</a>
+          <a href="#menu"         class="btn btn--ghost">Explore Menu</a>
+        </div>
+      </div>
+
+      <div class="hero__scroll-indicator" aria-hidden="true">
+        <span class="hero__scroll-line"></span>
+        <span class="hero__scroll-label">Scroll</span>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         SECTION F2 – MENU
+    ==================================================== -->
+    <section id="menu" class="menu-section section" aria-labelledby="menu-heading">
+      <div class="section__inner">
+
+        <header class="section__header">
+          <p class="section__eyebrow">Handcrafted with love</p>
+          <h2 class="section__title" id="menu-heading">Our Menu</h2>
+          <p class="section__subtitle">
+            Every dish is prepared from recipes passed down through generations,<br class="break-md" />
+            using ingredients sourced from trusted Italian farms and local artisans.
+          </p>
+        </header>
+
+        <!-- Tab Buttons -->
+        <div class="menu__tabs" role="tablist" aria-label="Menu categories">
+          <button
+            class="menu__tab menu__tab--active"
+            role="tab"
+            aria-selected="true"
+            aria-controls="menu-panel"
+            data-category="all"
+            id="tab-all"
+            type="button"
+          >All</button>
+          <button
+            class="menu__tab"
+            role="tab"
+            aria-selected="false"
+            aria-controls="menu-panel"
+            data-category="antipasti"
+            id="tab-antipasti"
+            type="button"
+          >Antipasti</button>
+          <button
+            class="menu__tab"
+            role="tab"
+            aria-selected="false"
+            aria-controls="menu-panel"
+            data-category="pasta"
+            id="tab-pasta"
+            type="button"
+          >Pasta &amp; Risotto</button>
+          <button
+            class="menu__tab"
+            role="tab"
+            aria-selected="false"
+            aria-controls="menu-panel"
+            data-category="secondi"
+            id="tab-secondi"
+            type="button"
+          >Secondi</button>
+          <button
+            class="menu__tab"
+            role="tab"
+            aria-selected="false"
+            aria-controls="menu-panel"
+            data-category="dolci"
+            id="tab-dolci"
+            type="button"
+          >Dolci</button>
+        </div>
+
+        <!-- Dish Cards Grid -->
+        <div class="menu__grid" id="menu-panel" role="tabpanel" aria-live="polite">
+
+          <!-- ANTIPASTI -->
+          <article class="dish-card" data-category="antipasti">
+            <div class="dish-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1572441713132-c542fc4fe282?w=600&q=80"
+                alt="Burrata e Pomodori – creamy burrata with heirloom tomatoes"
+                class="dish-card__image"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+              <span class="dish-card__badge">Chef's Pick</span>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__meta">
+                <span class="dish-card__category">Antipasti</span>
+                <span class="dish-card__price">$18</span>
+              </div>
+              <h3 class="dish-card__name">Burrata e Pomodori</h3>
+              <p class="dish-card__desc">Creamy burrata over heirloom tomatoes, basil oil, and Maldon sea salt.</p>
+            </div>
+          </article>
+
+          <article class="dish-card" data-category="antipasti">
+            <div class="dish-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?w=600&q=80"
+                alt="Carpaccio di Manzo – thinly sliced beef carpaccio"
+                class="dish-card__image"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__meta">
+                <span class="dish-card__category">Antipasti</span>
+                <span class="dish-card__price">$22</span>
+              </div>
+              <h3 class="dish-card__name">Carpaccio di Manzo</h3>
+              <p class="dish-card__desc">Thinly sliced Wagyu beef, truffle shavings, aged Parmigiano, lemon dressing.</p>
+            </div>
+          </article>
+
+          <article class="dish-card" data-category="antipasti">
+            <div class="dish-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1541014741259-de529411b96a?w=600&q=80"
+                alt="Frittura di Calamari – crispy fried squid"
+                class="dish-card__image"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__meta">
+                <span class="dish-card__category">Antipasti</span>
+                <span class="dish-card__price">$16</span>
+              </div>
+              <h3 class="dish-card__name">Frittura di Calamari</h3>
+              <p class="dish-card__desc">Crispy fried Adriatic squid, served with house-made aioli and lemon wedge.</p>
+            </div>
+          </article>
+
+          <!-- PASTA & RISOTTO -->
+          <article class="dish-card" data-category="pasta">
+            <div class="dish-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1612874742237-6526221588e3?w=600&q=80"
+                alt="Tagliatelle al Ragù – handmade pasta with Bolognese"
+                class="dish-card__image"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+              <span class="dish-card__badge">Signature</span>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__meta">
+                <span class="dish-card__category">Pasta</span>
+                <span class="dish-card__price">$28</span>
+              </div>
+              <h3 class="dish-card__name">Tagliatelle al Ragù</h3>
+              <p class="dish-card__desc">Handmade egg tagliatelle, slow-cooked Bolognese, aged Parmigiano Reggiano.</p>
+            </div>
+          </article>
+
+          <article class="dish-card" data-category="pasta">
+            <div class="dish-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=600&q=80"
+                alt="Cacio e Pepe – classic Roman pasta"
+                class="dish-card__image"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__meta">
+                <span class="dish-card__category">Pasta</span>
+                <span class="dish-card__price">$24</span>
+              </div>
+              <h3 class="dish-card__name">Cacio e Pepe</h3>
+              <p class="dish-card__desc">Tonnarelli pasta, Pecorino Romano, coarsely cracked black pepper. Pure simplicity.</p>
+            </div>
+          </article>
+
+          <article class="dish-card" data-category="pasta">
+            <div class="dish-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80"
+                alt="Risotto al Tartufo Nero – black truffle risotto"
+                class="dish-card__image"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+              <span class="dish-card__badge">Seasonal</span>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__meta">
+                <span class="dish-card__category">Risotto</span>
+                <span class="dish-card__price">$36</span>
+              </div>
+              <h3 class="dish-card__name">Risotto al Tartufo Nero</h3>
+              <p class="dish-card__desc">Carnaroli rice, Umbrian black truffle, Parmigiano cream, chive oil.</p>
+            </div>
+          </article>
+
+          <article class="dish-card" data-category="pasta">
+            <div class="dish-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=600&q=80"
+                alt="Pappardelle al Cinghiale – wild boar pappardelle"
+                class="dish-card__image"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__meta">
+                <span class="dish-card__category">Pasta</span>
+                <span class="dish-card__price">$32</span>
+              </div>
+              <h3 class="dish-card__name">Pappardelle al Cinghiale</h3>
+              <p class="dish-card__desc">Wide egg pasta ribbons with slow-braised Tuscan wild boar, juniper and red wine.</p>
+            </div>
+          </article>
+
+          <!-- SECONDI -->
+          <article class="dish-card" data-category="secondi">
+            <div class="dish-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80"
+                alt="Bistecca alla Fiorentina – Florentine T-bone steak"
+                class="dish-card__image"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+              <span class="dish-card__badge">House Favourite</span>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__meta">
+                <span class="dish-card__category">Secondi</span>
+                <span class="dish-card__price">$68</span>
+              </div>
+              <h3 class="dish-card__name">Bistecca alla Fiorentina</h3>
+              <p class="dish-card__desc">40-day dry-aged Chianina T-bone, rosemary, garlic, extra-virgin olive oil. Serves two.</p>
+            </div>
+          </article>
+
+          <article class="dish-card" data-category="secondi">
+            <div class="dish-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80"
+                alt="Branzino al Sale – salt-crusted sea bass"
+                class="dish-card__image"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__meta">
+                <span class="dish-card__category">Secondi</span>
+                <span class="dish-card__price">$48</span>
+              </div>
+              <h3 class="dish-card__name">Branzino al Sale</h3>
+              <p class="dish-card__desc">Whole Mediterranean sea bass baked in a herb salt crust, fennel salad, salsa verde.</p>
+            </div>
+          </article>
+
+          <article class="dish-card" data-category="secondi">
+            <div class="dish-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1604908177453-7462950a6a3b?w=600&q=80"
+                alt="Ossobuco alla Milanese – braised veal shank"
+                class="dish-card__image"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__meta">
+                <span class="dish-card__category">Secondi</span>
+                <span class="dish-card__price">$52</span>
+              </div>
+              <h3 class="dish-card__name">Ossobuco alla Milanese</h3>
+              <p class="dish-card__desc">Slow-braised veal shank, gremolata, saffron risotto. A Milanese classic.</p>
+            </div>
+          </article>
+
+          <!-- DOLCI -->
+          <article class="dish-card" data-category="dolci">
+            <div class="dish-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=600&q=80"
+                alt="Tiramisù Classico – classic Italian tiramisù"
+                class="dish-card__image"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+              <span class="dish-card__badge">Iconic</span>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__meta">
+                <span class="dish-card__category">Dolci</span>
+                <span class="dish-card__price">$14</span>
+              </div>
+              <h3 class="dish-card__name">Tiramisù Classico</h3>
+              <p class="dish-card__desc">Savoiardi, mascarpone cream, espresso, Marsala wine, dusted cocoa. Grandmother's recipe.</p>
+            </div>
+          </article>
+
+          <article class="dish-card" data-category="dolci">
+            <div class="dish-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&q=80"
+                alt="Panna Cotta al Lampone – vanilla panna cotta with raspberry"
+                class="dish-card__image"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__meta">
+                <span class="dish-card__category">Dolci</span>
+                <span class="dish-card__price">$12</span>
+              </div>
+              <h3 class="dish-card__name">Panna Cotta al Lampone</h3>
+              <p class="dish-card__desc">Silky vanilla panna cotta, fresh raspberry coulis, micro basil.</p>
+            </div>
+          </article>
+
+          <article class="dish-card" data-category="dolci">
+            <div class="dish-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&q=80"
+                alt="Cannoli Siciliani – crispy cannoli with ricotta filling"
+                class="dish-card__image"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__meta">
+                <span class="dish-card__category">Dolci</span>
+                <span class="dish-card__price">$13</span>
+              </div>
+              <h3 class="dish-card__name">Cannoli Siciliani</h3>
+              <p class="dish-card__desc">Crispy fried shells, sweet ricotta, candied orange peel, dark chocolate chips.</p>
+            </div>
+          </article>
+
+        </div><!-- /.menu__grid -->
+
+        <div class="menu__empty" id="menu-empty" aria-live="polite" hidden>
+          <p>No dishes found in this category.</p>
+        </div>
+
+      </div><!-- /.section__inner -->
+    </section>
+
+    <!-- ===================================================
+         SECTION F4 – OUR STORY
+    ==================================================== -->
+    <section id="our-story" class="story-section section" aria-labelledby="story-heading">
+      <div class="section__inner story-section__inner">
+
+        <div class="story-section__image-col" aria-hidden="true">
+          <div class="story-section__image-frame">
+            <img
+              src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80"
+              alt="Interior of La Bella Cucina restaurant, warm candlelight and vintage decor"
+              class="story-section__img"
+              loading="lazy"
+              width="800"
+              height="1000"
+            />
+            <div class="story-section__image-badge">
+              <span class="story-section__image-badge-year">1987</span>
+              <span class="story-section__image-badge-label">Est. Milano</span>
+            </div>
+          </div>
+          <div class="story-section__image-accent" aria-hidden="true"></div>
+        </div>
+
+        <div class="story-section__text-col">
+          <p class="section__eyebrow">A Family Legacy</p>
+          <h2 class="section__title" id="story-heading">Our Story</h2>
+
+          <p class="story-section__body">
+            In the autumn of 1987, Lucia and Marco Ferretti left their village in the Emilia-Romagna
+            countryside carrying nothing but a leather-bound recipe book and an unshakeable belief
+            that honest food — cooked slowly and served with love — could build a home anywhere
+            in the world.
+          </p>
+          <p class="story-section__body">
+            They opened La Bella Cucina in a narrow street near the Navigli canals of Milan.
+            Word spread quickly. The Bolognese simmered for six hours. The pasta was rolled
+            at dawn. The wine was chosen by Marco himself every Saturday morning at the market.
+            Within a year, the tiny trattoria was full every evening.
+          </p>
+          <p class="story-section__body">
+            Today, their daughter Sofia and son Alessandro carry the tradition forward —
+            honouring every recipe while weaving in inspiration from the seasons and from
+            their own travels through Puglia, Sicily, and beyond. The leather recipe book
+            still lives in the kitchen, its pages stained with decades of olive oil and memory.
+          </p>
+
+          <div class="story-section__values">
+            <div class="story-section__value">
+              <span class="story-section__value-icon" aria-hidden="true">🌾</span>
+              <div>
+                <h3 class="story-section__value-title">Farm to Fork</h3>
+                <p class="story-section__value-desc">Direct relationships with farmers in Emilia-Romagna, Calabria and Sardinia.</p>
+              </div>
+            </div>
+            <div class="story-section__value">
+              <span class="story-section__value-icon" aria-hidden="true">🍷</span>
+              <div>
+                <h3 class="story-section__value-title">Curated Wine Cellar</h3>
+                <p class="story-section__value-desc">Over 180 labels from small Italian estates, selected by our resident sommelier.</p>
+              </div>
+            </div>
+            <div class="story-section__value">
+              <span class="story-section__value-icon" aria-hidden="true">👨‍🍳</span>
+              <div>
+                <h3 class="story-section__value-title">Generational Recipes</h3>
+                <p class="story-section__value-desc">Every recipe traces back to Lucia's original handwritten collection from 1987.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================
+         SECTION F5 – RESERVATIONS
+    ==================================================== -->
+    <section id="reservations" class="reservations-section section" aria-labelledby="reservations-heading">
+      <div class="section__inner">
+
+        <header class="section__header">
+          <p class="section__eyebrow">Join us at the table</p>
+          <h2 class="section__title" id="reservations-heading">Reservations</h2>
+          <p class="section__subtitle">
+            Book your table online or call us directly.<br class="break-md" />
+            We'd love to welcome you.
+          </p>
+        </header>
+
+        <div class="reservations__grid">
+
+          <!-- Panel 1: Booking Form -->
+          <div class="reservations__panel reservations__panel--form">
+            <h3 class="reservations__panel-title">Book a Table</h3>
+            <form
+              class="booking-form"
+              id="booking-form"
+              novalidate
+              aria-label="Table reservation form"
+            >
+              <div class="booking-form__row">
+                <div class="form-group">
+                  <label for="fname" class="form-label">First Name <span aria-hidden="true">*</span></label>
+                  <input
+                    type="text"
+                    id="fname"
+                    name="fname"
+                    class="form-input"
+                    autocomplete="given-name"
+                    placeholder="Giulia"
+                    required
+                    minlength="2"
+                    aria-required="true"
+                  />
+                  <span class="form-error" id="fname-error" role="alert"></span>
+                </div>
+                <div class="form-group">
+                  <label for="lname" class="form-label">Last Name <span aria-hidden="true">*</span></label>
+                  <input
+                    type="text"
+                    id="lname"
+                    name="lname"
+                    class="form-input"
+                    autocomplete="family-name"
+                    placeholder="Rossi"
+                    required
+                    minlength="2"
+                    aria-required="true"
+                  />
+                  <span class="form-error" id="lname-error" role="alert"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address <span aria-hidden="true">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  autocomplete="email"
+                  placeholder="giulia@example.com"
+                  required
+                  aria-required="true"
+                />
+                <span class="form-error" id="email-error" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="form-input"
+                  autocomplete="tel"
+                  placeholder="+1 (555) 000-0000"
+                  pattern="[+\d\s\-\(\)]{7,20}"
+                />
+                <span class="form-error" id="phone-error" role="alert"></span>
+              </div>
+
+              <div class="booking-form__row">
+                <div class="form-group">
+                  <label for="date" class="form-label">Date <span aria-hidden="true">*</span></label>
+                  <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    class="form-input"
+                    required
+                    aria-required="true"
+                  />
+                  <span class="form-error" id="date-error" role="alert"></span>
+                </div>
+                <div class="form-group">
+                  <label for="time" class="form-label">Time <span aria-hidden="true">*</span></label>
+                  <select
+                    id="time"
+                    name="time"
+                    class="form-input form-select"
+                    required
+                    aria-required="true"
+                  >
+                    <option value="" disabled selected>Select time</option>
+                    <option value="12:00">12:00 PM</option>
+                    <option value="12:30">12:30 PM</option>
+                    <option value="13:00">1:00 PM</option>
+                    <option value="13:30">1:30 PM</option>
+                    <option value="14:00">2:00 PM</option>
+                    <option value="18:00">6:00 PM</option>
+                    <option value="18:30">6:30 PM</option>
+                    <option value="19:00">7:00 PM</option>
+                    <option value="19:30">7:30 PM</option>
+                    <option value="20:00">8:00 PM</option>
+                    <option value="20:30">8:30 PM</option>
+                    <option value="21:00">9:00 PM</option>
+                    <option value="21:30">9:30 PM</option>
+                  </select>
+                  <span class="form-error" id="time-error" role="alert"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="guests" class="form-label">Number of Guests <span aria-hidden="true">*</span></label>
+                <input
+                  type="number"
+                  id="guests"
+                  name="guests"
+                  class="form-input"
+                  min="1"
+                  max="12"
+                  placeholder="2"
+                  required
+                  aria-required="true"
+                />
+                <span class="form-error" id="guests-error" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="notes" class="form-label">Special Requests</label>
+                <textarea
+                  id="notes"
+                  name="notes"
+                  class="form-input form-textarea"
+                  placeholder="Dietary requirements, special occasions, allergies…"
+                  rows="3"
+                  maxlength="400"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--full">
+                Confirm Reservation
+              </button>
+            </form>
+
+            <!-- Success state -->
+            <div class="booking-form__success" id="booking-success" hidden aria-live="polite">
+              <div class="booking-form__success-icon" aria-hidden="true">✓</div>
+              <h3 class="booking-form__success-title">You're on the list!</h3>
+              <p class="booking-form__success-msg">
+                We've received your reservation and will send a confirmation to your email shortly.
+                <em>A presto!</em>
+              </p>
+            </div>
+          </div>
+
+          <!-- Panel 2: Hours & Contact -->
+          <div class="reservations__panel reservations__panel--hours">
+            <h3 class="reservations__panel-title">Hours &amp; Contact</h3>
+
+            <div class="hours__block">
+              <h4 class="hours__label">Lunch</h4>
+              <ul class="hours__list" role="list">
+                <li class="hours__item">
+                  <span class="hours__day">Tuesday – Friday</span>
+                  <span class="hours__time">12:00 – 14:30</span>
+                </li>
+                <li class="hours__item">
+                  <span class="hours__day">Saturday – Sunday</span>
+                  <span class="hours__time">12:00 – 15:00</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="hours__block">
+              <h4 class="hours__label">Dinner</h4>
+              <ul class="hours__list" role="list">
+                <li class="hours__item">
+                  <span class="hours__day">Tuesday – Thursday</span>
+                  <span class="hours__time">18:00 – 22:00</span>
+                </li>
+                <li class="hours__item">
+                  <span class="hours__day">Friday – Saturday</span>
+                  <span class="hours__time">18:00 – 23:00</span>
+                </li>
+                <li class="hours__item">
+                  <span class="hours__day">Sunday</span>
+                  <span class="hours__time">18:00 – 21:30</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="hours__block">
+              <h4 class="hours__label">Closed</h4>
+              <p class="hours__closed">Mondays &amp; select public holidays</p>
+            </div>
+
+            <div class="contact-block">
+              <a href="tel:+15550001234" class="contact-block__item">
+                <span class="contact-block__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.36 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+                </span>
+                <span>+1 (555) 000-1234</span>
+              </a>
+              <a href="mailto:hello@labellacucina.com" class="contact-block__item">
+                <span class="contact-block__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </span>
+                <span>hello@labellacucina.com</span>
+              </a>
+              <div class="contact-block__item contact-block__item--address">
+                <span class="contact-block__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </span>
+                <address>
+                  128 Via Naviglio Grande<br />
+                  Milan, Italy 20144
+                </address>
+              </div>
+            </div>
+
+            <div class="reservations__social">
+              <a href="https://instagram.com" class="social-link" aria-label="La Bella Cucina on Instagram" target="_blank" rel="noopener noreferrer">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="https://facebook.com" class="social-link" aria-label="La Bella Cucina on Facebook" target="_blank" rel="noopener noreferrer">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              </a>
+              <a href="https://tripadvisor.com" class="social-link" aria-label="La Bella Cucina on TripAdvisor" target="_blank" rel="noopener noreferrer">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Panel 3: Map -->
+          <div class="reservations__panel reservations__panel--map">
+            <h3 class="reservations__panel-title">Find Us</h3>
+            <div class="map__wrap">
+              <iframe
+                title="La Bella Cucina location on Google Maps"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.308523516!2d9.1664!3d45.4548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDI3JzE3LjMiTiA5wrAwOSc1OS4wIkU!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                class="map__iframe"
+                width="100%"
+                height="300"
+                style="border: 0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                aria-label="Google Maps showing La Bella Cucina restaurant location in Milan"
+              ></iframe>
+            </div>
+            <div class="map__directions">
+              <a
+                href="https://maps.google.com/?q=Via+Naviglio+Grande+128+Milan+Italy"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn--outline btn--sm"
+                aria-label="Get directions to La Bella Cucina on Google Maps (opens in new tab)"
+              >
+                Get Directions
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+
+            <div class="map__transport">
+              <h4 class="map__transport-title">Getting Here</h4>
+              <ul class="map__transport-list" role="list">
+                <li>
+                  <strong>Metro:</strong> Porta Genova (M2) – 4 min walk
+                </li>
+                <li>
+                  <strong>Tram:</strong> Lines 2 &amp; 14, stop Ripa di Porta Ticinese
+                </li>
+                <li>
+                  <strong>Parking:</strong> Piazzale Cantore garage, 200m away
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div><!-- /.reservations__grid -->
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer__inner">
+
+      <div class="footer__brand">
+        <a href="#hero" class="footer__logo" aria-label="La Bella Cucina – back to top">
+          <span class="footer__logo-script">La Bella Cucina</span>
+        </a>
+        <p class="footer__tagline">Genuine Italian hospitality since 1987.</p>
+        <div class="footer__social">
+          <a href="https://instagram.com" class="social-link social-link--light" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://facebook.com" class="social-link social-link--light" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <div class="footer__nav-col">
+          <h4 class="footer__nav-title">Visit</h4>
+          <ul role="list">
+            <li><a href="#menu"         class="footer__nav-link">Menu</a></li>
+            <li><a href="#reservations" class="footer__nav-link">Reservations</a></li>
+            <li><a href="#our-story"    class="footer__nav-link">Our Story</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav-col">
+          <h4 class="footer__nav-title">Contact</h4>
+          <ul role="list">
+            <li><a href="tel:+15550001234"              class="footer__nav-link">+1 (555) 000-1234</a></li>
+            <li><a href="mailto:hello@labellacucina.com" class="footer__nav-link">hello@labellacucina.com</a></li>
+            <li><span class="footer__nav-text">128 Via Naviglio Grande, Milan</span></li>
+          </ul>
+        </div>
+        <div class="footer__nav-col">
+          <h4 class="footer__nav-title">Policies</h4>
+          <ul role="list">
+            <li><a href="#" class="footer__nav-link">Privacy Policy</a></li>
+            <li><a href="#" class="footer__nav-link">Accessibility</a></li>
+            <li><a href="#" class="footer__nav-link">Cookie Settings</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    </div><!-- /.footer__inner -->
+
+    <div class="footer__bottom">
+      <p class="footer__copy">
+        &copy; <span id="footer-year">2024</span> La Bella Cucina. All rights reserved.
+      </p>
+      <p class="footer__credit">
+        Crafted with <span aria-label="love">♥</span> in Milan
+      </p>
+    </div>
+  </footer>
+
+  <!-- Skip to main content link (visually hidden, revealed on focus) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- JavaScript -->
+  <script src="main.js"></script>
+
+</body>
+</html>
